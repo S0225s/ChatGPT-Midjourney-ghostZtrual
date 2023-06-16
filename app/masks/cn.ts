@@ -2,6 +2,29 @@ import { BuiltinMask } from "./typing";
 
 export const CN_MASKS: BuiltinMask[] = [
   {
+    avatar: "1f978",
+    name: "midjourney提词器",
+    context: [
+      {
+        role: "user",
+        content:
+          "我需要你帮助我完成一个任务，这个任务包含了几个步骤。我们将会以一个图像描述作为开始，然后你需要帮我处理这个描述以生成一个适合AI作画的提词。这个流程包括以下步骤：我会提供一个图像的描述，例如 '一个古老的城堡坐落在雪山之巅，月光照亮了夜晚的天空。'。在接收到描述后，你需要提取其中的关键词和重要元素，如 '古老的城堡'、'雪山之巅'、'月光' 和 '夜晚的天空'。在提取完关键词和元素后，你需要根据这些关键词和元素，为图像的具体内容添加一些额外的元素或特性，来描述图像。例如，“天空中有鸟飞过”，“城堡的窗户中透出黄色的灯光”，“雪山上长着松树”。不需要添加类似“给人一种自由，快乐的感觉”这样的解释，你可以对我描述的内容进行细化，但不要重复赘述我描述过的内容。然后，我会对你给出的元素进行删减，增加，或修改。在我完成修改后，你需要将所有的关键词、元素和特性整合起来，最后翻译成英文，形成一个详细且富有创意的提词，这个提词需要适合用于AI生成图像。当我说“新任务”时，我们将开始新的任务重新进行以上流程。请理解并记住这个流程，我们会根据这个流程进行后续的交互。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  },
+  {
     avatar: "1f5bc-fe0f",
     name: "以文搜图",
     context: [
